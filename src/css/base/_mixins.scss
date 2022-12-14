@@ -1,0 +1,194 @@
+@import 'variables';
+
+@mixin responsivetext() {
+  font-size: $coa-font-size-small;
+  line-height: $coa-line-height-small;
+
+  // @include media($coa-medium-screen) {
+  //   font-size: $coa-font-size-md-small;
+  //   line-height: $coa-line-height-md-small;
+  // }
+  // @include media($coa-large-screen) {
+  //   font-size: $coa-font-size-medium;
+  //   line-height: $coa-line-height-medium;
+  // }
+}
+
+@mixin ulli() {
+  margin-left: 2rem;
+  @include media($coa-medium-screen) {
+    margin-left: 3rem;
+  }
+}
+
+//headings
+@mixin heading1() {
+  font-size: $coa-font-size-medium;
+  line-height: $coa-line-height-medium;
+  // margin-bottom: $coa-spacing-medium; Removing the bottom margin here centers the h1 on service pages
+  // margin-top: $coa-spacing-medium;
+
+  // @include media($coa-small-screen) {
+  //   font-size: $coa-font-size-large;
+  //   line-height: $coa-line-height-large;
+  //   margin-bottom: $coa-spacing-medium;
+  //   margin-top: $coa-spacing-large;
+  // }
+
+  @include media($coa-medium-screen) {
+    font-size: $coa-font-size-xlarge;
+    line-height: $coa-line-height-xlarge;
+    // margin-bottom: $coa-spacing-large; Removing the bottom margin here centers the h1 on service pages
+  }
+
+  // @include media($coa-large-screen) {
+  //   font-size: $coa-font-size-large;
+  //   line-height: $coa-line-height-large;
+  //   margin-bottom: $coa-spacing-large;
+  //   margin-top: $coa-spacing-xlarge;
+  // }
+}
+
+@mixin heading2() {
+  font-size: $coa-font-size-medium;
+  font-weight: $coa-font-medium;
+  line-height: $coa-line-height-medium;
+  margin-bottom: $coa-spacing-large;
+  // margin-top: $coa-spacing-medium;
+
+  // @include media($coa-small-screen) {
+  //   font-size: $coa-font-size-medium;
+  //   line-height: $coa-line-height-medium;
+  //   margin-bottom: $coa-spacing-medium;
+  //   margin-top: $coa-spacing-large;
+  // }
+
+  // @include media($coa-medium-screen) {
+  //   font-size: $coa-font-size-large;
+  //   line-height: $coa-line-height-large;
+  //   margin-bottom: $coa-spacing-large;
+  //   margin-top: $coa-spacing-xlarge;
+  // }
+
+  // @include media($coa-large-screen) {
+  //   font-size: $coa-font-size-xlarge;
+  //   line-height: $coa-line-height-xlarge;
+  //   margin-bottom: $coa-spacing-large;
+  //   margin-top: $coa-spacing-xlarge;
+  // }
+}
+
+@mixin heading3() {
+  font-size: $coa-font-size-md-small;
+  font-weight: $coa-font-bold; //$coa-font-regular; This makes the h3s in HtmlFromRichText much nicer.
+  line-height: $coa-line-height-md-small;
+  // margin-top: $coa-spacing-medium;
+
+  // @include media($coa-small-screen) {
+  //   font-size: $coa-font-size-md-small;
+  //   line-height: $coa-line-height-md-small;
+  //   margin-bottom: $coa-spacing-medium;
+  //   margin-top: $coa-spacing-large;
+  // }
+
+  // @include media($coa-medium-screen) {
+  //   font-size: $coa-font-size-medium;
+  //   line-height: $coa-line-height-medium;
+  //   margin-bottom: $coa-spacing-large;
+  //   margin-top: $coa-spacing-xlarge;
+  // }
+
+  // @include media($coa-large-screen) {
+  //   font-size: $coa-font-size-medium;
+  //   line-height: $coa-line-height-medium;
+  //   margin-bottom: $coa-spacing-large;
+  //   margin-top: $coa-spacing-xlarge;
+  // }
+}
+
+@mixin heading4() {
+  font-size: $coa-font-size-md-small;
+  font-weight: $coa-font-regular;
+  line-height: $coa-line-height-md-small;
+  margin-bottom: $coa-spacing-large;
+
+  // @include media($coa-small-screen) {
+  //   font-size: $coa-font-size-md-small;
+  //   line-height: $coa-line-height-md-small;
+  //   margin-bottom: $coa-spacing-medium;
+  //   margin-top: $coa-spacing-large;
+  // }
+
+  // @include media($coa-medium-screen) {
+  //   font-size: $coa-font-size-medium;
+  //   line-height: $coa-line-height-medium;
+  //   margin-bottom: $coa-spacing-large;
+  //   margin-top: $coa-spacing-xlarge;
+  // }
+
+  // @include media($coa-large-screen) {
+  //   font-size: $coa-font-size-medium;
+  //   line-height: $coa-line-height-medium;
+  //   margin-bottom: $coa-spacing-large;
+  //   margin-top: $coa-spacing-xlarge;
+  // }
+}
+
+//other mixin helpers
+@mixin box-verticalcenter($height: auto) {
+  align-items: center;
+  display: flex;
+  height: $height;
+}
+
+/**
+  Add responsive styling to be used only for specific device sizes
+  ex:
+  @include mobile {
+    background-color: $coa-color-green-light;
+  }
+
+  Synchronize changes with src/js/helpers/reactMediaQueries.js
+**/
+@mixin mobile-small {
+  @media (max-width: #{$coa-small-screen - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$coa-medium-screen - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$coa-medium-screen}) and (max-width: #{$coa-large-screen - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile-and-tablet {
+  @media (max-width: #{$coa-large-screen - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-and-desktop {
+  @media (min-width: #{$coa-medium-screen}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$coa-large-screen}) {
+    @content;
+  }
+}
+
+/**
+  Add mixins for common style components
+**/
+@mixin gray-bottom-border {
+  border-bottom: 1px solid #dddfe1;
+}

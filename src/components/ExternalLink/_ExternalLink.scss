@@ -1,0 +1,37 @@
+.coa-ExternalLink {
+  opacity: 1;
+  text-decoration: none;
+  color: $coa-color-primary;
+  &:hover {
+    opacity: 0.75;
+  }
+
+  svg {
+    margin-left: $coa-space-level1;
+    vertical-align: middle;
+    path {
+      fill: $coa-color-decently-black;
+    }
+  }
+}
+
+.coa-ExternalLink.underline {
+  text-decoration: underline;
+}
+
+.coa-rtl {
+  .coa-ExternalLink {
+    svg {
+      margin-right: $coa-space-level1;
+      margin-left: 0;
+    }
+  }
+}
+
+.coa-ExternalLinkMaterial {
+  opacity: 0.75;
+  padding: 0 3px;
+  font-size: 12px;
+  position: relative;
+  top: 1px;
+}

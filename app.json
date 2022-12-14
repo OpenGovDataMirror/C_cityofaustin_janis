@@ -1,0 +1,24 @@
+{
+  "name": "janis",
+  "scripts": {
+  },
+  "env": {
+    "CMS_API": {
+      "required": true
+    },
+    "CMS_MEDIA": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}

@@ -1,0 +1,15 @@
+.coa-FormContainer__iframe-container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+// Recommended styling from iframe-resizer docs
+.coa-FormContainer__IframeResizer-default {
+  width: 1px;
+  min-width: 100%;
+}
+
+#coa-iFrameForm {
+  opacity: 0; // set at 0 because it's set at 1 by loader animation
+  margin-top: 50px;
+}

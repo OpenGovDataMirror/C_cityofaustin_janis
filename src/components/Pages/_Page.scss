@@ -1,0 +1,45 @@
+.coa-Page__all-of-the-content {
+  display: flex;
+  max-width: $coa-wrapper-maxwidth;
+  margin: auto;
+}
+
+.coa-Page__main-content {
+  width: 100%; // Required for IE11
+  margin-bottom: 2rem;
+}
+
+.coa-Page__side-content {
+  display: none;
+  @include media($coa-large-screen) {
+    display: inherit;
+  }
+  padding-left: 2rem;
+  padding-right: 2rem;
+  flex-direction: column;
+}
+
+.coa-Page__contacts-mobile {
+  @include media($coa-large-screen) {
+    display: none;
+  }
+  background: #f7f7f7;
+  margin-bottom: 16px;
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+.coa-Page__all-of-the-content {
+  ul {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
+}
+
+.coa-Page__all-of-the-content {
+  li {
+    margin-bottom: 0;
+  }
+}

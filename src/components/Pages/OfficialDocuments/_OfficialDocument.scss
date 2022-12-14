@@ -1,0 +1,133 @@
+.coa-OfficialDocumentPage__container {
+  font-size: $coa-font-size-small;
+  margin-top: 3rem;
+  border-bottom: $coa-border-bottom-small-light-gray;
+  padding-bottom: 3rem;
+}
+
+.coa-OfficialDocumentPageEntry__date {
+  color: $coa-color-gray-dark;
+  font-size: $coa-font-size-xsmall;
+}
+
+.coa-OfficialDocumentPage__date {
+  color: #5c5c5c;
+  font-size: 18px;
+  height: 23px;
+  line-height: 28px;
+  @include media($coa-medium-screen) {
+    font-size: 24px;
+    height: 32px;
+    line-height: 36px;
+  }
+}
+
+.coa-OfficialDocumentPage__title {
+  margin-bottom: 0rem;
+}
+
+.coa-OfficialDocumentPage__small-heading-container {
+  line-height: normal;
+}
+
+.coa-OfficialDocumentPage__small-heading {
+  font-weight: bold;
+}
+
+.coa-OfficialDocumentPage__pdf-size {
+  color: $coa-color-gray;
+}
+
+.coa-OfficialDocumentPage__summary {
+  color: #454545;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: 0.25px;
+  margin-bottom: 16px;
+  padding-left: 10px;
+  @include media($coa-large-screen) {
+    margin-bottom: 64px;
+    font-size: 24px;
+  }
+}
+
+.coa-OfficialDocumentPage__side-content {
+  margin-top: 24px;
+  display: none;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  @include media($coa-large-screen) {
+    display: inherit;
+  }
+}
+
+.coa-OfficialDocumentPage__document {
+  margin-bottom: 16px;
+  padding-left: 10px;
+  width: 500px;
+  h2 {
+    margin-bottom: 16px;
+  }
+  @include media($coa-large-screen) {
+    margin-bottom: 32px;
+    width: inherit;
+  }
+}
+
+.coa-OfficialDocumentPage__span {
+  font-weight: $coa-font-semibold;
+}
+
+.coa-OfficialDocumentPage__content-container {
+  padding-left: 10px;
+}
+
+.coa-OfficialDocumentPage__disclaimer {
+  color: #454545;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+
+.coa-OfficialDocumentPage__content {
+  background-color: #f3f3f3;
+  padding: 16px;
+  margin-bottom: 48px;
+  font-size: 16px;
+  @include media($coa-medium-screen) {
+    padding: 40px;
+  }
+}
+
+.coa-OfficialDocumentPage__tiles-container {
+  width: 364px;
+}
+
+.coa-OfficialDocumentPage__tiles-mobile {
+  width: 288px;
+  padding-left: 10px;
+  padding-bottom: 32px;
+  @include media($coa-medium-screen) {
+    width: 704px;
+  }
+  @include media($coa-large-screen) {
+    display: none;
+  }
+}
+
+.coa-OfficialDocumentPage__side-content-heading {
+  width: 288px;
+  height: 23px;
+  color: #2d2e2f;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+  margin-bottom: 8px;
+  margin-top: 0px;
+  @include media($coa-large-screen) {
+    width: 364px;
+  }
+}
+
+

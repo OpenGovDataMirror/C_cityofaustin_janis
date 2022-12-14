@@ -1,0 +1,240 @@
+.coa-EventListPage__Entry {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  margin-top: 24px;
+  margin-left:0px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #dcdee0;
+  text-decoration: none;
+  color: #212121;
+  @include media($coa-medium-screen) {
+    margin-top: 40px;
+    padding-bottom: 40px;
+    width: 859px;
+  }
+}
+
+.coa-EventListPage__Entry--homepage {
+  max-width: 760px;
+  @include media($coa-large-screen) {
+    border-bottom: 0;
+    width: 356px;
+  }
+}
+
+.coa-EventListPage__Entry--relatedPage {
+  margin-top: unset;
+  margin-left: 16px;
+  margin-right: 16px;
+  max-width: 760px;
+  border: 1px solid #dcdee0;
+  padding: 16px;
+  @include media($coa-large-screen) {
+    margin-left: unset;
+    margin-right: unset;
+  }
+}
+
+.coa-EventListPage__Entry--relatedPage:first-of-type {
+  border-radius: 4px 4px 0px 0px;
+}
+
+.coa-EventListPage__Entry--relatedPage:last-of-type {
+  border-radius: 4px;
+}
+
+.coa-EventListPage__Entry--relatedPage:hover {
+  background-color: #0050d8;
+  padding: 16px;
+  div {
+    color: #fff;
+  }
+  a {
+    color: #fff;
+  }
+  .coa-EventListPage__icon {
+    color: #fff;
+  }
+  .coa-EventListPage__DateCal-month {
+    color: #0050d8;
+  }
+  .coa-EventListPage__DateCal-date {
+    color: #0050d8;
+  }
+}
+
+.coa-EventListPage__Entry--relatedLocation {
+  width: auto;
+}
+
+.coa-EventListPage__icon {
+  display: none;
+  @include media($coa-medium-screen) {
+    display: block;
+    font-size: 32px;
+    margin-top: 37px;
+    color: #0049c7;
+  }
+}
+
+.coa-EventListPage__DateCal {
+  width: 71px;
+  height: 80px;
+  background-color: #f7f9fa;
+  border-radius: 4px;
+  @include media($coa-medium-screen) {
+    height: 112px;
+    width: 88px;
+  }
+}
+
+.coa-EventListPage__DateCal--homepage {
+  width: 71px;
+  height: 80px;
+  background-color: #f7f9fa;
+  @include media($coa-medium-screen) {
+    height: 112px;
+    width: 88px;
+  }
+}
+
+.coa-EventListPage__DateCal-month {
+  border-radius: 4px 4px 0px 0px;
+  background-color: #f1f3f6;
+  height: 28px;
+  line-height: 28px;
+  color: #171717;
+  text-align: center;
+  font-size: 14px;
+  font-weight: $coa-font-bold;
+  @include media($coa-medium-screen) {
+    line-height: 34px;
+    height: 34px;
+  }
+}
+
+.coa-EventListPage__DateCal-date {
+  text-align: center;
+  align-items: center;
+  line-height: 52px;
+  font-size: 24px;
+  font-weight: $coa-font-bold;
+  color: #171717;
+  @include media($coa-medium-screen) {
+    line-height: 78px;
+    font-size: 32px;
+  }
+  @include media($coa-large-screen) {
+    font-size: 40px;
+  }
+}
+
+.coa-EventListPage__Canceled {
+  background-color: #d83933;
+  color: #ffffff;
+  height: 27px;
+  line-height: 27px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-weight: $coa-font-bold;
+  font-size: 12px;
+  text-align: center;
+  width: 99px;
+  @include media($coa-medium-screen) {
+    font-size: 10px;
+  }
+}
+
+.coa-EventListPage__EntryDetails {
+  margin-left: 24px;
+  min-width: 189px;
+  @include media($coa-medium-screen) {
+    width: 637px;
+  }
+}
+
+.coa-EventListPage__EntryDetails--homepage {
+  @include media($coa-large-screen) {
+    max-width: 250px;
+  }
+}
+
+.coa-EventListPage__EntryDetails--relatedLocation {
+  @include media($coa-large-screen) {
+    max-width: 470px;
+  }
+}
+
+.coa-EventListPage__Time {
+  font-size: 16px;
+  color: #212121;
+  font-weight: $coa-font-bold;
+  line-height: 18px;
+}
+
+.coa-EventListPage__Title {
+  font-size: 18px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  max-width: 233px;
+  line-height: 26px;
+  font-weight: 500;
+  @include media($coa-medium-screen) {
+    font-size: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    max-width: 637px;
+  }
+}
+
+.coa-EventListPage__Title {
+  a {
+    text-decoration: none;
+  }
+}
+
+.coa-EventListPage__Location {
+  font-size: 16px;
+  line-height: 24px;
+  color: #5c5c5c;
+}
+
+.coa-EventListPage__Cost {
+  font-size: 16px;
+  line-height: 24px;
+  color: #5c5c5c;
+}
+
+.coa-EventListPage__Time--relatedPage:hover {
+  color: #fff;
+}
+
+.coa-EventListPage__Title--relatedPage:hover {
+  color: #fff;
+}
+
+.coa-EventListPage__Location--relatedPage:hover {
+  color: #fff;
+}
+
+.coa-EventListPage__Cost--relatedPage:hover {
+  color: #fff;
+}
+
+/* Pagination */
+
+.coa-EventListPage_pagination-container {
+  margin: 40px 10px 40px;
+  /*border-top: 1px solid $coa-color-gray-lighter;*/
+  padding-top: 15px;
+  width: 740px;
+  text-align: center;
+  :first-child {
+    padding-left: 0px;
+    margin-left: 0px;
+  }
+  @include media($coa-medium-screen) {
+    width: 859px;
+  }
+}

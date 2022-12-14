@@ -1,0 +1,295 @@
+.coa-FullSiteMenu {
+  background: $coa-color-white;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  height: 56px;
+  box-shadow: $coa-box-shadow-medium;
+  @include mobile {
+    height: 0px;
+  }
+}
+
+.coa-ThemesNav {
+  background: $coa-color-white;
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
+}
+
+.coa-FullSiteMenu__close {
+  position: absolute;
+  top: 65px;
+  right: 20px;
+  z-index: 50;
+  cursor: pointer;
+}
+
+.coa-ThemesNav__list {
+  display: none;
+  @include media($coa-medium-screen) {
+    display: flex;
+    flex: 1;
+    list-style: none;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.coa-ThemesNav__theme {
+  margin: 0;
+  display: table;
+  position: relative;
+  text-align: left;
+  height: 56px;
+  padding: 10px 5px 10px 5px;
+}
+
+.coa-ThemesNav__theme:focus {
+  outline: none;
+}
+
+.coa-ThemesNav__link {
+  transition: background-color .3s, box-shadow .3s;
+  display: table-cell;
+  vertical-align: middle;
+  margin: 10px;
+  border-radius: 18px;
+  padding-left: 16px;
+  padding-right: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: $coa-font-size-xsmall;
+  font-weight: $coa-font-regular;
+  color: $coa-color-burnt-coffee-black;
+  line-height: 16px;
+  &:hover {
+    color: $coa-color-burnt-coffee-black;
+    background-color: $coa-color-blue-warm-5v;
+    box-shadow: 2px 5px 7px rgba(0,0,255,0.2);
+    transition: background-color .3s, box-shadow .3s;
+  }
+}
+
+.coa-ThemesNav__link.es {
+  font-size: 13px;
+  line-height: 13px;
+}
+
+.coa-ThemesNav__link.active {
+  background-color: $coa-color-gray-4;
+  &:hover {
+    background-color: $coa-color-blue-warm-5v;
+    box-shadow: 2px 5px 7px rgba(0,0,255,0.2);
+    transition: background-color .3s, box-shadow .3s;
+  }
+}
+
+.coa-FullSiteMenu__container {
+  width: 100%;
+  z-index: 2;
+  .wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.coa-MessageWIP {
+  position: relative;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  background-color: $coa-color-vintage-vanilla;
+  border-radius: $coa-menu-border-radius;
+  color: $coa-color-black;
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 3px;
+}
+
+.coa-FullSiteMenu__subNav {
+  display: none;
+  width: 100%;
+  .wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    @include mobile-small {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  @include mobile {
+    padding: 0;
+  }
+}
+
+.coa-FullSiteMenu--active {
+  background: $coa-color-white;
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0);
+  .coa-FullSiteMenu__subNav {
+    display: block;
+  }
+}
+
+.coa-FullSiteMenu_dropdown {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(27,27,27,0.25);
+}
+
+.coa-ThemesTopicsMenu__list {
+  list-style: none;
+  background-color: $coa-color-white;
+  border-radius: $coa-menu-border-radius;
+}
+
+.coa-ThemesTopicsMenu__section {
+  margin-left: 0;
+  width: 100%;
+  position: relative;
+  padding: 0 10%;
+}
+
+.coa-ThemesTopicsMenu__theme {
+  font-size: $coa-font-size-md-small;
+  font-weight: $coa-font-medium;
+  line-height: $coa-line-height-small;
+  color: $coa-color-dark-blue;
+  margin-bottom: $coa-spacing-xsmall;
+  padding: $coa-space-level5 0;
+  border-bottom: $coa-border-small-light-gray;
+}
+
+.coa-ThemesTopicsMenu__topics {
+  margin-left: $coa-spacing-medium;
+  padding: $coa-spacing-small;
+  padding-bottom: 5rem;
+  column-width: 750px;
+  @include media($coa-medium-screen) {
+    margin-left: 0;
+  }
+}
+
+.coa-ThemesTopicsMenu__topics2col {
+  column-width: 400px;
+}
+
+.coa-ThemesTopicsMenu__topics3col {
+  column-width: 250px;
+}
+
+.coa-ThemesTopicsMenu__topic {
+  margin: 0;
+  list-style: none;
+  break-inside: avoid-column; /* Prevent element from breaking */
+  page-break-inside: avoid; /* Prevent element from breaking in Firefox */
+  padding-bottom: $coa-spacing-small;
+}
+
+.coa-ThemesTopicsMenu__link {
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: $coa-font-medium;
+}
+
+.coa-FullSiteMenu__coming-soon {
+  margin: 0;
+  color: $coa-color-darkest-grey;
+  font-size: $coa-font-size-xsmall;
+  line-height: $coa-line-height-xsmall;
+  font-style: italic;
+}
+
+.coa-ThemesTopicsMenu--FooterSiteMap {
+  .coa-FullSiteMenu__coming-soon {
+    color: $coa-footer-light-gray;
+  }
+}
+
+.coa-MenuInfo {
+  background: $coa-color-grey;
+  display: none;
+  border-top: $coa-menu-border-width solid $coa-menu-bodercolor;
+  border-bottom-left-radius: $coa-menu-border-radius;
+  border-bottom-right-radius: $coa-menu-border-radius;
+  @include media($coa-medium-screen) {
+    display: block;
+  }
+}
+
+.coa-MenuInfo__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: $coa-spacing-small 0;
+}
+
+.coa-MenuInfo__disclaimer {
+  font-size: $coa-font-size-small;
+  color: $coa-color-decently-black;
+  flex: 1 0 50%;
+}
+
+.coa-MenuInfo__resource {
+  // techdebt: we may be dealing with some weird div sizing here
+  // the links weren't clickable without this fix
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  margin-right: $coa-spacing-small;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.coa-MenuInfo__svg {
+  display: flex;
+  margin-right: $coa-spacing-small;
+  svg {
+    background: white;
+    border-radius: 100%;
+    width: 4rem;
+    height: 4rem;
+    padding: 0.5rem;
+  }
+  i {
+    color: $coa-color-primary;
+    font-size: 4.5rem;
+  }
+}
+
+.coa-MenuInfo__link {
+  color: $coa-color-primary;
+  font-weight: $coa-font-medium;
+  font-size: $coa-font-size-xsmall;
+  line-height: $coa-line-height-xsmall;
+}
+
+.coa-ThemesNav__right-controls {
+  padding-right: 1rem;
+  display: inline;
+  div {
+    display: inline-block;
+  }
+  a {
+    font-size: $coa-font-size-xsmall;
+  }
+  a:first-child {
+    padding-right: $coa-space-level3;
+  }
+  i {
+    display: inline;
+  }
+  @include mobile {
+    display: none;
+  }
+}
+
+.coa-FullSiteMenu__activeGapFill {
+  background-color: white;
+  height: 56px;
+}

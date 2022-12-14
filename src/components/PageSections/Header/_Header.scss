@@ -1,0 +1,205 @@
+.coa-Header {
+  font-family: $coa-font-sans;
+  background-color: $coa-color-primary;
+  color: $coa-color-white;
+}
+
+.coa-Header--menu-is-open {
+  position: fixed;
+  width: 100%;
+}
+
+.coa-Header--gov-is-open{
+  padding-top: 30px;
+}
+
+.coa-Header__container {
+  max-width: $coa-top-menu-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  @include media($coa-medium-screen) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.coa-Header__controls {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 56px;
+  display: block;
+  @include media($coa-medium-screen) {
+    display: flex;
+  }
+}
+
+.coa-Header__left-controls {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 2rem;
+  width: auto;
+  @include media($coa-medium-screen) {
+    margin-left: 0;
+    width: 43%;
+  }
+}
+
+.coa-Header__center-controls {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  order: 3;
+  height: 56px;
+  padding: $coa-spacing-small 0;
+  @include media($coa-medium-screen) {
+    order: unset;
+    width: initial;
+    border-top: none;
+    padding: 0;
+  }
+}
+
+.coa-Header__menuIcon {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  font-weight: $coa-font-medium;
+  margin-right: 0.4rem;
+  color: $coa-color-primary;
+  position: absolute;
+  margin-left: 3.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background-color: $coa-color-white;
+  height: 34px;
+  border-radius: $coa-border-radius-medium;
+  cursor: pointer;
+  i {
+    font-size: $coa-font-size-md-small;
+  }
+  @include mobile {
+    display: flex;
+    font-size: $coa-font-size-xsmall;
+    margin-left: none;
+  }
+  @include mobile-small {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    margin-left: 1.5rem;
+  }
+}
+
+.coa-Header__center-controls--active {
+  background: $coa-color-white;
+
+  .coa-Header__logo {
+    color: $coa-color-primary;
+
+    &:visited {
+      color: $coa-color-primary;
+    }
+  }
+
+  .coa-Header__menuIcon {
+    color: $coa-color-white;
+    background-color: $coa-color-primary;
+  }
+
+  @include media($coa-medium-screen) {
+    background: none;
+
+    .coa-Header__logo {
+      color: $coa-color-white;
+
+      &:visited {
+        color: $coa-color-white;
+      }
+    }
+  }
+}
+
+.coa-Header__mobile-languages {
+  @include media($coa-medium-screen) {
+    display: none;
+  }
+}
+
+.coa-Header__desktop-languages {
+  display: none;
+  @include media($coa-medium-screen) {
+    display: flex;
+  }
+}
+
+.coa-Header__menu-toggle {
+  font-weight: $coa-font-semibold;
+  opacity: 0.75;
+}
+
+.coa-Header__logo {
+  color: $coa-color-white;
+  font-weight: $coa-font-semibold;
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+  &:hover {
+    color: $coa-color-white;
+  }
+  &:visited {
+    color: $coa-color-white;
+  }
+  @include media($coa-medium-screen) {
+    font-size: 1.8rem;
+    margin: initial;
+  }
+}
+
+.coa-Header__gov-site {
+  font-size: 1.2rem;
+  line-height: 3.1rem;
+  svg {
+    vertical-align: middle;
+    height: 1.6rem;
+    margin-top: -0.4rem;
+    margin-right: 0.4rem;
+    margin-left: 0.4rem;
+  }
+}
+
+.coa-Header__gov-site-open {
+  background: $coa-color-blue-darkest;
+  position: fixed;
+  top:0;
+  z-Index: 1;
+  max-width: $coa-top-menu-max-width;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.2rem;
+  line-height: 3.1rem;
+  cursor: pointer;
+  border-radius: 0px 0px;
+  svg {
+    vertical-align: middle;
+    height: 1.6rem;
+    margin-top: -0.4rem;
+    margin-right: 0.4rem;
+    margin-left: 0.4rem;
+  }
+}
+
+.coa-Header__gov-site-title {
+  background: $coa-color-blue-darkest;
+  cursor: pointer;
+  border-radius: 0px 0px 4px 4px;
+}
+
+.coa-Header__gov-site-toggle {
+  margin-left: 0.5rem;
+  i {
+    vertical-align: middle;
+    margin-top: -0.4rem;
+  }
+}

@@ -1,0 +1,140 @@
+.coa-PageHeader--news {
+  h1 {
+    color: #171717;
+    @include mobile {
+      font-size: 2.4rem;
+      line-height: 3rem;
+    }
+  }
+}
+
+.coa-PageHeader--news__city-seal-wrapper {
+  width: 28.78px;
+  height: 28.78px;
+  display: inline-block;
+}
+
+.coa-PageHeader--news__release-text {
+  display: inline;
+  font-size: 1.8rem;
+  color: #5c5c5c;
+  line-height: 2.8rem;
+  vertical-align: top;
+  margin-left: 0.8rem;
+}
+
+.coa-NewsPage__published-date {
+  color: #5c5c5c;
+  font-size: 1.6rem;
+  margin-top: 2rem;
+}
+
+.coa-NewsPage__by-line {
+  color: #5c5c5c;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  margin-bottom: 3rem;
+  @include mobile {
+    margin-bottom: 1rem;
+  }
+}
+
+.coa-NewsPage__footer-published-date {
+  font-size: 1.6rem;
+  border-top: 1px solid #dfe1e2;
+  color: #5c5c5c;
+  padding-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.coa-PageHeader--news-list {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  @include mobile {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  h1 {
+    font-size: 4.8rem;
+    line-height: 5rem;
+    @include mobile {
+      font-size: 3.2rem;
+    }
+  }
+}
+
+.coa-NewsListPage__news-date {
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  color: #757575;
+
+  @include tablet {
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+  }
+}
+
+.coa-NewsListPage__news-link {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  border-bottom: 1px solid #dfe1e2;
+  padding-top: 8px;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  font-weight: 500;
+  a {
+    text-decoration: none;
+  }
+
+  @include mobile {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+.coa-NewsPage__list-page-link {
+  background: #f6f6f6;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  padding-left: 16px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  display: flex;
+  text-decoration: none;
+}
+
+.coa-NewsPage__list-page-link-text {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  flex-grow: 1;
+  font-weight: 500;
+}
+
+.coa-NewsPage__list-page-link-arrow {
+  padding-right: 16px;
+}
+
+.coa-NewsPage__list-page-link-mobile {
+  display: none;
+  @include mobile-and-tablet {
+    display: block;
+  }
+}
+
+// PageSelector has some different styling on NewsPage only.
+// TODO: see if we still want NewsPage styling to be an exception
+.coa-NewsPage__main-content {
+    &>.wrapper>.row>.coa-PageSelector_container {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        padding-top: 15px;
+        // TODO: those 2 things are both used by the EventListPage as well
+        text-align: center;
+        @include media($coa-medium-screen) {
+            width: 859px;
+        }
+    }
+}

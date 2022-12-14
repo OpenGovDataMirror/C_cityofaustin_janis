@@ -1,0 +1,253 @@
+.coa-DepartmentPage__contacts-desktop {
+  width: 315px;
+  margin-top: $coa-space-level7;
+}
+
+.coa-ServicePage__contacts-desktop {
+  width: 315px;
+}
+
+.coa-ContactDetails__name {
+  font-size: $coa-font-size-small;
+  margin-bottom: 0;
+  &:not(:first-of-type) {
+    margin-top: $coa-space-level6;
+    padding-top: $coa-space-level6;
+    border-top: 2px solid $coa-color-dark-grey;
+  }
+}
+
+/*
+Assumes that there are 2 children for each .coa-ContactItem.
+This will enable proper line wrapping for the :last-child.
+*/
+.coa-ContactItem {
+  // border-bottom: 1px dashed $coa-color-purple-dark;
+  display: flex;
+  align-items: flex-start;
+  font-size: $coa-font-size-xsmall;
+  line-height: $coa-line-height-xsmall;
+  padding-top: $coa-spacing-small;
+  text-align: left;
+  padding-left: $coa-spacing-medium;
+  padding-right: $coa-spacing-medium;
+
+  @include media($coa-medium-screen) {
+    // font-size: $coa-font-size-small;
+    // line-height: $coa-line-height-small;
+    // padding: $coa-spacing-medium 0;
+  }
+
+  @include media($coa-large-screen) {
+    // font-size: $coa-font-size-md-small;
+    // line-height: $coa-line-height-md-small;
+  }
+
+  & > :first-child {
+    margin-right: $coa-spacing-small;
+    // margin-top: $coa-spacing-xsmall;
+  }
+
+  & > :last-child {
+    flex: 1; /* allows line wrap for long contact values. */
+    & > span {
+      display: block;
+    }
+  }
+
+  &:last-child {
+    border: none;
+  }
+
+  .material-icons {
+    color: $coa-color-primary;
+    // vertical-align: middle;
+  }
+
+  .coa-ExternalLink {
+    color: $coa-color-primary;
+
+    &:visited {
+      color: $coa-color-primary;
+    }
+
+    svg {
+      width: $coa-font-size-small;
+      path {
+        fill: $coa-color-primary;
+      }
+    }
+  }
+}
+
+.coa-ContactItem__svg {
+  // Getting these to line up with material icons isn't pretty
+  margin-right: 6px !important;
+
+  svg {
+    // height: $coa-font-size-medium; fb icon looks better this way, twitter is a little small
+    //   maybe figure out an icon set for these in the future to suppliment material-icons
+    width: $coa-font-size-medium;
+    height: $coa-font-size-smedium;
+
+    path {
+      fill: $coa-color-primary;
+    }
+
+    // Getting these to line up with material icons isn't pretty
+    margin-left: -4px;
+
+    // @include media($coa-medium-screen) {
+    //   height: $coa-font-size-small - .1rem;
+    //   width: $coa-font-size-small - .1rem;
+    // }
+
+    // @include media($coa-large-screen) {
+    //   height: $coa-font-size-md-small - .1rem;
+    //   width: $coa-font-size-md-small - .1rem;
+    // }
+  }
+}
+
+.coa-rtl {
+  .coa-ContactItem {
+    & > :first-child {
+      margin-right: 0;
+      margin-left: $coa-spacing-large;
+    }
+    text-align: right;
+  }
+}
+
+.coa-ContactHours {
+  th {
+    font-size: $coa-font-size-xsmall;
+    padding-right: 0 !important;
+    text-transform: capitalize;
+    /* ".usa-table-borderless th:first-child" uses 6rem, which is too much */
+    padding-right: 1rem !important;
+    font-weight: bold;
+    background: $coa-color-card-grey;
+  }
+
+  td {
+    background: $coa-color-card-grey;
+  }
+
+  td:last-of-type {
+    font-size: $coa-font-size-xsmall;
+    text-align: right;
+  }
+}
+.coa-rtl {
+  .coa-ContactHours {
+    td:last-of-type {
+      text-align: left;
+    }
+  }
+}
+
+.coa-ContactItem_content {
+  /* Flexbox hack to allow long content to wrap to next line */
+  min-width: 1%;
+  /* Yes, you need both. "word-break" fixes mobile styling */
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.coa-ContactAddressTitle {
+  font-weight: $coa-font-extrabold;
+}
+
+.coa-ContactDetails {
+  background: $coa-color-card-grey;
+  border-radius: 4px;
+  border-left: none;
+  border-right: none;
+  .coa-SectionHeader {
+    padding-top: $coa-spacing-medium;
+    padding-left: $coa-spacing-medium;
+    padding-right: $coa-spacing-medium;
+    margin-bottom: 0rem;
+  }
+}
+
+@mixin location-link($text-class, $arrow-class, $arrow-size) {
+  display: flex;
+  padding: $coa-spacing-md-small;
+  justify-content: space-between;
+  font-size: $coa-font-size-small;
+  line-height: $coa-line-height-xsmall;
+  text-decoration: none;
+  border-top: 1px solid #dcdee0;
+  margin-top: $coa-spacing-small;
+  padding-left: 2.4rem;
+  padding-right: 1.8rem;
+  #{$arrow-class} {
+    .material-icons {
+      font-size: $arrow-size;
+    }
+  }
+
+  &:hover {
+    background: $coa-color-primary;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+
+    #{$text-class} {
+      color: $coa-color-white;
+    }
+    #{$arrow-class} {
+      color: $coa-color-white;
+    }
+  }
+  &:focus {
+    background: $coa-color-darker-blue;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    #{$text-class} {
+      color: $coa-color-white;
+    }
+    #{$arrow-class} {
+      color: $coa-color-white;
+    }
+  }
+}
+
+.coa-ContactDetails__location-link {
+  @include location-link(
+    '.coa-ContactDetails__location-link-text',
+    '.coa-ContactDetails__location-link-arrow',
+    24px
+  );
+}
+
+.coa-ContactDetails__location-link-text {
+  color: #0049c7;
+}
+
+.coa-ContactDetails__location-link-arrow {
+  display: flex;
+  color: #0049c7;
+}
+
+.coa-ContactDetails__locationless {
+  height: 3rem;
+}
+
+.coa-ContactHoursExceptionsTitle {
+  font-size: $coa-font-size-xsmall;
+  font-weight: $coa-font-semibold;
+  margin-top: 1.2rem;
+  line-height: $coa-line-height-xxsmall;
+}
+
+.coa-ContactHoursExceptions {
+  font-size: $coa-font-size-xsmall;
+  line-height: $coa-line-height-xxsmall;
+
+  // Don't use <p> styling for nested RichTextBlock
+  p {
+    all: unset;
+  }
+}
